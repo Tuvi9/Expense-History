@@ -7,6 +7,7 @@ const ExpensesList = (props) => {
         return <p className='expenses-list__fallback'>No expenses found.</p>
     }
     
+    /* Filters expenses by years */
     return (
         <ul className='expenses-list'>
             {
