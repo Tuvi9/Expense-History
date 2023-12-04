@@ -9,19 +9,19 @@ const ExpenseForm = (props) => {
     // Takes users input from Title field
     const titleChangeHandler = (event) => {
         setEnteredTitle(event.target.value)
-        console.log(enteredTitle)
+        /*console.log(enteredTitle)*/
     }
 
     // Takes users input from Amount field
     const amountChangeHandler = (event) => {
         setEnteredAmount(event.target.value)
-        console.log(enteredAmount)
+        /*console.log(enteredAmount)*/
     }
 
     // Takes users input from Date field
     const dateChangeHandler = (event) => {
         setEnteredDate(event.target.value)
-        console.log(enteredDate)
+        /*console.log(enteredDate)*/
     }
 
     const submitHandler = (event) => {
