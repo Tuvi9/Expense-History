@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import React, { useState, useEffect } from 'react'; 
 
 import './App.css';
 import Expenses from './components/Expenses/Expenses';
@@ -34,11 +34,16 @@ const App = () => {
     console.log('In App.js')
     setExpenses((previousExpenses) => {
         return [expense, ...previousExpenses]
-    })
-  }
-  console.log(expenses)
-
-
+      })
+    }
+    
+  /* Never logs DUMMY_EXPENSES */
+    useEffect(() => {
+      if (expenses !== DUMMY_EXPENSES) {
+          console.log(expenses);
+      }
+  }, [expenses]);
+  
   return (
     <div className="App">
       <NewExpense onAddExpense={addExpensehandler}></NewExpense>
